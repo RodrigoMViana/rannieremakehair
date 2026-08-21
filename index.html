@@ -1,0 +1,921 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ranniere Make Hair</title>
+<meta name="description" content="Studio de beleza em Manaíra, João Pessoa. Cabelo, coloração, penteado e maquiagem com Ranniere Barreto. Aberto 24 horas, todos os dias. 4,9 estrelas no Google. Agende pelo WhatsApp.">
+<meta name="theme-color" content="#0B0A0A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230B0A0A'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='40' fill='%23E02434' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ranniere Make Hair">
+<meta property="og:title" content="Ranniere Make Hair — Studio de Beleza 24 horas">
+<meta property="og:description" content="Cabelo, coloração, penteado e maquiagem em Manaíra, João Pessoa. Aberto 24 horas, todos os dias.">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="assets/img/fachada-noite.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Pinyon+Script&display=swap">
+
+<style>
+:root{
+  --ink:#0B0A0A;
+  --ink-2:#151212;
+  --line:#2A2424;
+  --bone:#EDE8E3;
+  --muted:#9C918C;
+  --muted-dim:#6E6461;
+  --red:#E02434;
+  --red-hi:#F0404F;
+  --gold:#C9A87C;
+  --serif:"Bodoni Moda",Georgia,"Times New Roman",serif;
+  --sans:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --script:"Pinyon Script","Bodoni Moda",cursive;
+  --maxw:1180px;
+  --gut:clamp(20px,5vw,56px);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+body{
+  margin:0;
+  background:var(--ink);
+  color:var(--bone);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{text-wrap:balance;margin:0;font-weight:400}
+p{margin:0}
+
+.wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gut)}
+
+.eyebrow{
+  font-size:11px;font-weight:600;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--red);margin:0;
+}
+
+.display{font-family:var(--serif);font-weight:400;line-height:1.02;letter-spacing:-.015em}
+.rule{height:1px;background:var(--line);border:0;margin:0}
+
+/* ---------- botões ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6em;
+  font-family:var(--sans);font-size:14px;font-weight:600;
+  letter-spacing:.08em;text-transform:uppercase;
+  padding:16px 26px;border-radius:2px;border:1px solid transparent;
+  text-decoration:none;cursor:pointer;
+  transition:background .18s ease,color .18s ease,border-color .18s ease;
+}
+.btn-primary{background:var(--red);color:#fff;border-color:var(--red)}
+.btn-primary:hover{background:var(--red-hi);border-color:var(--red-hi)}
+.btn-ghost{background:transparent;color:var(--bone);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--bone)}
+.btn svg{width:17px;height:17px;flex:none;fill:currentColor}
+
+:where(a,button,input,select,textarea,summary):focus-visible{
+  outline:2px solid var(--red-hi);outline-offset:3px;
+}
+
+/* ---------- topo ---------- */
+.nav{
+  position:sticky;top:0;z-index:60;
+  background:rgba(11,10,10,.86);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid transparent;
+  transition:border-color .25s ease;
+}
+.nav.is-stuck{border-bottom-color:var(--line)}
+.nav-in{display:flex;align-items:center;gap:28px;height:74px}
+
+.mark{display:flex;flex-direction:column;line-height:1;text-decoration:none;margin-right:auto}
+.mark-name{font-family:var(--script);font-size:31px;color:var(--bone);padding-bottom:2px}
+.mark-sub{font-size:9px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--red)}
+
+.nav-links{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+.nav-links a{
+  text-decoration:none;font-size:13px;font-weight:500;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);transition:color .18s ease;
+}
+.nav-links a:hover{color:var(--bone)}
+.nav .btn{padding:12px 20px;font-size:12px}
+
+.nav-toggle{
+  display:none;width:44px;height:44px;flex:none;
+  background:transparent;border:1px solid var(--line);border-radius:2px;
+  color:var(--bone);cursor:pointer;padding:0;
+  align-items:center;justify-content:center;
+}
+.nav-toggle:hover{border-color:var(--bone)}
+.nav-toggle span,.nav-toggle span::before,.nav-toggle span::after{
+  content:"";display:block;width:18px;height:1.5px;background:currentColor;transition:transform .25s ease,opacity .2s ease;
+}
+.nav-toggle span{position:relative}
+.nav-toggle span::before{position:absolute;top:-6px}
+.nav-toggle span::after{position:absolute;top:6px}
+.nav-toggle[aria-expanded="true"] span{background:transparent}
+.nav-toggle[aria-expanded="true"] span::before{transform:translateY(6px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] span::after{transform:translateY(-6px) rotate(-45deg)}
+
+.menu{
+  position:fixed;inset:74px 0 0;z-index:55;display:none;
+  background:var(--ink);padding:var(--gut);
+  flex-direction:column;gap:4px;
+}
+.menu.is-open{display:flex}
+.menu a{
+  font-family:var(--serif);font-size:30px;line-height:1.5;
+  text-decoration:none;color:var(--bone);border-bottom:1px solid var(--line);padding:14px 0;
+}
+.menu-foot{margin-top:auto;color:var(--muted);font-size:14px;line-height:1.7}
+
+@media (max-width:900px){
+  .nav-links{display:none}
+  .nav-toggle{display:flex}
+}
+@media (min-width:901px){.menu{display:none !important}}
+@media (max-width:520px){.nav .btn span{display:none}.nav .btn{padding:12px 14px}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:min(94vh,860px);display:flex;align-items:flex-end;isolation:isolate}
+.hero-bg{position:absolute;inset:0;z-index:-2;overflow:hidden}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 42%}
+.hero-bg::after{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(180deg,rgba(11,10,10,.86) 0%,rgba(11,10,10,.30) 34%,rgba(11,10,10,.82) 74%,var(--ink) 100%),
+    radial-gradient(120% 80% at 50% 100%,rgba(224,36,52,.16),transparent 60%);
+}
+.hero-in{padding-block:clamp(56px,11vh,120px);width:100%}
+.hero h1{font-family:var(--serif);font-size:clamp(46px,9vw,116px);line-height:.94;letter-spacing:-.025em;margin:22px 0 0}
+.hero h1 em{font-style:italic;color:var(--red)}
+.hero-lede{max-width:46ch;color:var(--muted);font-size:clamp(16px,1.7vw,19px);margin-top:22px}
+.hero-lede strong{color:var(--bone);font-weight:600}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+
+.badge{
+  display:inline-flex;align-items:center;gap:10px;
+  border:1px solid var(--line);background:rgba(11,10,10,.6);
+  border-radius:100px;padding:7px 15px 7px 11px;
+  font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+}
+.dot{width:7px;height:7px;border-radius:50%;background:#3BD97C;flex:none;position:relative}
+.dot::after{
+  content:"";position:absolute;inset:-4px;border-radius:50%;
+  border:1px solid #3BD97C;opacity:.5;animation:pulse 2.4s ease-out infinite;
+}
+@keyframes pulse{0%{transform:scale(.6);opacity:.7}100%{transform:scale(1.5);opacity:0}}
+@media (prefers-reduced-motion:reduce){.dot::after{animation:none;opacity:.4}}
+
+/* ---------- trilho de status ---------- */
+.rail{background:var(--ink-2);border-block:1px solid var(--line)}
+.rail-in{display:grid;grid-template-columns:repeat(4,1fr)}
+.rail-cell{padding:26px var(--gut);border-left:1px solid var(--line)}
+.rail-cell:first-child{border-left:0}
+.rail-k{font-family:var(--serif);font-size:clamp(26px,3.4vw,38px);line-height:1;font-variant-numeric:tabular-nums}
+.rail-k .unit{font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.1em;color:var(--muted);margin-left:6px}
+.rail-v{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-dim);margin-top:9px}
+.stars{color:var(--gold);letter-spacing:.1em;font-size:13px}
+@media (max-width:820px){
+  .rail-in{grid-template-columns:repeat(2,1fr)}
+  .rail-cell{border-left:0;border-top:1px solid var(--line)}
+  .rail-cell:nth-child(even){border-left:1px solid var(--line)}
+  .rail-cell:nth-child(-n+2){border-top:0}
+}
+
+/* ---------- seções ---------- */
+.sec{padding-block:clamp(72px,11vw,132px)}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;flex-wrap:wrap;margin-bottom:clamp(38px,5vw,60px)}
+.sec-head h2{font-family:var(--serif);font-size:clamp(34px,5.6vw,62px);line-height:1;letter-spacing:-.02em;margin-top:14px}
+.sec-note{max-width:38ch;color:var(--muted);font-size:15px}
+
+/* ---------- serviços ---------- */
+.svc-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.svc{background:var(--ink);padding:clamp(26px,3vw,38px);grid-column:span 2;display:flex;flex-direction:column;gap:12px;transition:background .2s ease}
+.svc:hover{background:var(--ink-2)}
+.svc.is-wide{grid-column:span 3}
+.svc-i{color:var(--red);width:26px;height:26px}
+.svc-i svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.svc h3{font-family:var(--serif);font-size:clamp(21px,2.3vw,27px);line-height:1.15;margin-top:4px}
+.svc p{color:var(--muted);font-size:14.5px;line-height:1.6}
+.svc-tag{margin-top:auto;padding-top:14px;font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-dim)}
+@media (max-width:900px){
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .svc,.svc.is-wide{grid-column:span 1}
+}
+@media (max-width:560px){.svc-grid{grid-template-columns:1fr}}
+.svc-foot{margin-top:20px;color:var(--muted-dim);font-size:13.5px}
+
+/* ---------- galeria ---------- */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.shot{position:relative;overflow:hidden;background:var(--ink-2);border:0;padding:0;cursor:zoom-in;aspect-ratio:3/4}
+.shot img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.3,1),filter .4s ease;filter:saturate(.94)}
+.shot:hover img{transform:scale(1.05);filter:saturate(1.06)}
+.shot::after{
+  content:attr(data-label);position:absolute;left:0;right:0;bottom:0;
+  padding:34px 16px 14px;text-align:left;
+  font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#fff;
+  background:linear-gradient(180deg,transparent,rgba(11,10,10,.9));
+  opacity:0;transition:opacity .3s ease;
+}
+.shot:hover::after,.shot:focus-visible::after{opacity:1}
+.shot.is-tall{grid-row:span 2;aspect-ratio:3/8}
+@media (max-width:900px){.gal{grid-template-columns:repeat(2,1fr)}.shot.is-tall{grid-row:span 1;aspect-ratio:3/4}}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(6,5,5,.95);backdrop-filter:blur(6px)}
+.lb.is-open{display:flex}
+.lb img{max-width:min(94vw,900px);max-height:88vh;width:auto;object-fit:contain}
+.lb-close{position:absolute;top:18px;right:18px;width:44px;height:44px;background:transparent;border:1px solid var(--line);color:var(--bone);font-size:20px;line-height:1;cursor:pointer;border-radius:2px}
+.lb-close:hover{border-color:var(--bone)}
+.lb-cap{position:absolute;bottom:22px;left:0;right:0;text-align:center;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+
+/* ---------- sobre ---------- */
+.about{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(30px,5vw,72px);align-items:center}
+.about-img{position:relative}
+.about-img img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 30%}
+.about-img::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(237,232,227,.12)}
+.about h2{font-family:var(--serif);font-size:clamp(32px,4.6vw,54px);line-height:1.02;letter-spacing:-.02em;margin:14px 0 22px}
+.about p+p{margin-top:16px}
+.about p{color:var(--muted);max-width:60ch}
+.about strong{color:var(--bone);font-weight:600}
+.sig{font-family:var(--script);font-size:38px;color:var(--bone);margin-top:26px;line-height:1}
+.sig-sub{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted-dim);margin-top:4px}
+@media (max-width:860px){.about{grid-template-columns:1fr}}
+
+/* ---------- avaliações ---------- */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.rev{background:var(--ink);padding:clamp(26px,3vw,36px);display:flex;flex-direction:column;gap:16px}
+.rev-stars{color:var(--gold);font-size:13px;letter-spacing:.14em}
+.rev q{font-family:var(--serif);font-size:clamp(18px,2vw,21px);line-height:1.42;quotes:"\201C" "\201D";color:var(--bone)}
+.rev-who{margin-top:auto;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-dim)}
+@media (max-width:860px){.revs{grid-template-columns:1fr}}
+.revs-foot{margin-top:20px;font-size:13.5px;color:var(--muted-dim)}
+.revs-foot a{color:var(--muted)}
+
+/* ---------- agendar ---------- */
+#agendar{background:var(--ink-2);border-block:1px solid var(--line)}
+.book{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,68px);align-items:start}
+@media (max-width:900px){.book{grid-template-columns:1fr}}
+.book h2{font-family:var(--serif);font-size:clamp(34px,5vw,56px);line-height:1;letter-spacing:-.02em;margin:14px 0 16px}
+.book-lede{color:var(--muted);max-width:48ch}
+
+.form{display:flex;flex-direction:column;gap:18px;margin-top:26px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field label{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.field input,.field select,.field textarea{
+  font-family:var(--sans);font-size:16px;color:var(--bone);
+  background:var(--ink);border:1px solid var(--line);border-radius:2px;
+  padding:14px 15px;width:100%;transition:border-color .18s ease;
+}
+.field input:hover,.field select:hover,.field textarea:hover{border-color:#3A3232}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--red);outline:none}
+.field textarea{resize:vertical;min-height:88px;line-height:1.55}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:480px){.field-row{grid-template-columns:1fr}}
+.form .btn{width:100%;padding:19px 26px}
+.form-note{font-size:12.5px;color:var(--muted-dim);line-height:1.55;text-align:center}
+.form-note a{color:var(--muted)}
+
+/* info de contato */
+.info{border:1px solid var(--line);background:var(--ink)}
+.info-row{display:flex;gap:16px;padding:22px clamp(20px,2.4vw,28px);border-top:1px solid var(--line);align-items:flex-start}
+.info-row:first-child{border-top:0}
+.info-ico{color:var(--red);width:19px;height:19px;flex:none;margin-top:3px}
+.info-ico svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.info-body{flex:1;min-width:0}
+.info-k{font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted-dim)}
+.info-v{margin-top:5px;font-size:16px;line-height:1.5}
+.info-v a{text-decoration:none;border-bottom:1px solid var(--line);transition:border-color .18s ease}
+.info-v a:hover{border-bottom-color:var(--red)}
+.info-v .sm{display:block;font-size:13.5px;color:var(--muted);margin-top:4px}
+.info-v.is-soft{font-size:15px;color:var(--muted)}
+
+.hours{width:100%;border-collapse:collapse;font-size:14px;margin-top:12px}
+.hours td{padding:5px 0;border:0}
+.hours td:first-child{color:var(--muted)}
+.hours td:last-child{text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
+.hours tr.is-today td{color:var(--bone)}
+.hours tr.is-today td:first-child{color:var(--red)}
+
+.clock{font-variant-numeric:tabular-nums;font-family:var(--serif)}
+
+/* ---------- rodapé ---------- */
+.foot{padding-block:clamp(48px,7vw,76px);color:var(--muted-dim);font-size:13px}
+.foot-top{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;align-items:flex-start}
+.foot-blurb{max-width:34ch;margin-top:14px;color:var(--muted)}
+.foot-social{display:flex;gap:10px;margin-top:18px}
+.foot-social a{width:42px;height:42px;border:1px solid var(--line);border-radius:2px;display:grid;place-items:center;color:var(--muted);transition:color .18s ease,border-color .18s ease}
+.foot-social a:hover{color:var(--bone);border-color:var(--bone)}
+.foot-social svg{width:18px;height:18px;fill:currentColor}
+.foot-nav{display:flex;flex-direction:column;gap:9px}
+.foot-nav a{text-decoration:none;color:var(--muted);font-size:13.5px}
+.foot-nav a:hover{color:var(--bone)}
+.foot-addr{max-width:30ch}
+.foot-addr p{margin-top:9px;color:var(--muted);font-size:13.5px;line-height:1.6}
+.foot-bottom{margin-top:44px;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+
+/* whatsapp flutuante */
+.fab{
+  position:fixed;right:18px;bottom:18px;z-index:80;
+  width:56px;height:56px;border-radius:50%;
+  background:var(--red);color:#fff;display:grid;place-items:center;
+  box-shadow:0 10px 30px rgba(0,0,0,.5);
+  transition:transform .2s ease,background .2s ease;
+}
+.fab:hover{transform:translateY(-2px);background:var(--red-hi)}
+.fab svg{width:27px;height:27px;fill:currentColor}
+
+/* revelação no scroll */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
+.rv.is-in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style>
+</head>
+<body>
+
+<!-- ============ TOPO ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a href="#inicio" class="mark">
+      <span class="mark-name">Ranniere</span>
+      <span class="mark-sub">Make Hair</span>
+    </a>
+    <nav aria-label="Principal">
+      <ul class="nav-links">
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#sobre">O Studio</a></li>
+        <li><a href="#avaliacoes">Avaliações</a></li>
+        <li><a href="#agendar">Onde estamos</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary" href="https://wa.me/5583996156267?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Ranniere%20Make%20Hair." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.09 3.2 5.08 4.48.71.31 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.04 21.5h-.01a9.4 9.4 0 0 1-4.79-1.32l-.34-.2-3.56.93.95-3.47-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.19 4.23-9.41 9.42-9.41 2.51 0 4.88.98 6.65 2.76a9.35 9.35 0 0 1 2.76 6.66c-.01 5.19-4.23 9.43-9.42 9.43m8.02-17.44A11.3 11.3 0 0 0 12.04 1C5.84 1 .8 6.04.8 12.24c0 1.98.52 3.92 1.5 5.63L.7 24l6.27-1.64a11.2 11.2 0 0 0 5.07 1.24h.01c6.2 0 11.24-5.04 11.25-11.24a11.2 11.2 0 0 0-3.24-7.94"/></svg>
+      <span>Agendar</span>
+    </a>
+    <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span></button>
+  </div>
+</header>
+
+<!-- fora do <header>: o backdrop-filter do topo viraria bloco de contenção para position:fixed -->
+<div class="menu" id="menu">
+  <a href="#servicos">Serviços</a>
+  <a href="#galeria">Galeria</a>
+  <a href="#sobre">O Studio</a>
+  <a href="#avaliacoes">Avaliações</a>
+  <a href="#agendar">Agendar</a>
+  <p class="menu-foot">R. Dr. Seixas Maia, 30 — Sala 103<br>Manaíra, João Pessoa — PB<br>Aberto 24 horas, todos os dias</p>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <div class="hero-bg">
+    <img src="assets/img/fachada-noite.png" alt="Fachada iluminada do studio Ranniere Make Hair à noite, em Manaíra, João Pessoa">
+  </div>
+  <div class="wrap hero-in">
+    <span class="badge"><span class="dot"></span><span id="clock-badge">Aberto agora — 24 horas</span></span>
+    <h1>Beleza que não<br>fecha às <em>18h</em>.</h1>
+    <p class="hero-lede">Studio de beleza em <strong>Manaíra, João Pessoa</strong>. Cabelo, coloração, penteado, barba e maquiagem com <strong>Ranniere Barreto</strong> — de segunda a segunda, <strong>24 horas por dia</strong>, sempre com hora marcada.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#agendar">Agendar meu horário</a>
+      <a class="btn btn-ghost" href="#galeria">Ver trabalhos</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRILHO ============ -->
+<div class="rail">
+  <div class="rail-in">
+    <div class="rail-cell">
+      <div class="rail-k">4,9</div>
+      <div class="stars" aria-label="4,9 de 5 estrelas">★★★★★</div>
+      <div class="rail-v">58 avaliações no Google</div>
+    </div>
+    <div class="rail-cell">
+      <div class="rail-k">24<span class="unit">horas</span></div>
+      <div class="rail-v">Todos os dias, inclusive domingo</div>
+    </div>
+    <div class="rail-cell">
+      <div class="rail-k">+10<span class="unit">anos</span></div>
+      <div class="rail-v">De clientes atendidos na cidade</div>
+    </div>
+    <div class="rail-cell">
+      <div class="rail-k clock" id="clock-big">--:--</div>
+      <div class="rail-v">Agora em João Pessoa</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SERVIÇOS ============ -->
+<section class="sec" id="servicos">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="eyebrow">O que fazemos</p>
+        <h2>Serviços</h2>
+      </div>
+      <p class="sec-note">Cabelo masculino e feminino, colorimetria, penteado e maquiagem no mesmo studio — com atendimento individual e hora marcada.</p>
+    </div>
+
+    <div class="svc-grid rv">
+      <article class="svc is-wide">
+        <span class="svc-i"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.1 8.1 20 20M20 4 8.1 15.9"/></svg></span>
+        <h3>Corte masculino &amp; barba</h3>
+        <p>Corte na tesoura ou máquina, degradê, acabamento na navalha e design de barba. O serviço mais elogiado do studio nas avaliações do Google.</p>
+        <span class="svc-tag">Corte · Degradê · Barba · Sobrancelha</span>
+      </article>
+
+      <article class="svc is-wide">
+        <span class="svc-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c-3.5 3-5 6-5 9a5 5 0 0 0 10 0c0-3-1.5-6-5-9Z"/><path d="M12 21v-4"/></svg></span>
+        <h3>Coloração &amp; morena iluminada</h3>
+        <p>Colorimetria feita com diagnóstico do fio: morena iluminada, mechas, luzes, loiros e correção de cor, respeitando a saúde do cabelo.</p>
+        <span class="svc-tag">Mechas · Luzes · Loiros · Correção</span>
+      </article>
+
+      <article class="svc">
+        <span class="svc-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h11a4 4 0 0 1 0 8H8"/><path d="m10 12-2 3 2 3"/><path d="M18 4v4"/></svg></span>
+        <h3>Escova, progressiva &amp; tratamento</h3>
+        <p>Alinhamento, redução de volume, hidratação e reconstrução para devolver brilho e movimento aos fios.</p>
+        <span class="svc-tag">Progressiva · Botox · Hidratação</span>
+      </article>
+
+      <article class="svc">
+        <span class="svc-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21a9 9 0 1 0-9-9"/><path d="M3 12a4 4 0 0 1 8 0 3 3 0 0 1-6 0"/><path d="M12 3v3"/></svg></span>
+        <h3>Penteados para noivas e festas</h3>
+        <p>Preso, semipreso e ondas marcadas para casamento, formatura e evento. Agende com antecedência — inclusive de madrugada.</p>
+        <span class="svc-tag">Noiva · Madrinha · Formatura</span>
+      </article>
+
+      <article class="svc">
+        <span class="svc-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12s3.5-5 9-5 9 5 9 5-3.5 5-9 5-9-5-9-5Z"/><circle cx="12" cy="12" r="2"/></svg></span>
+        <h3>Maquiagem profissional</h3>
+        <p>Make social, de festa e de noiva, com produtos de alta fixação. Há clientes que voltam para a make do Ranniere há mais de dez anos.</p>
+        <span class="svc-tag">Social · Noiva · Formatura</span>
+      </article>
+    </div>
+
+    <p class="svc-foot rv">Valores sob consulta e duração conforme o comprimento do cabelo — chame no WhatsApp e receba o orçamento antes de fechar o horário.</p>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ============ GALERIA ============ -->
+<section class="sec" id="galeria">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="eyebrow">Portfólio</p>
+        <h2>Trabalhos do studio</h2>
+      </div>
+      <p class="sec-note">Cabelo, cor e make feitos no Ranniere Make Hair. Toque em qualquer foto para ampliar.</p>
+    </div>
+
+    <div class="gal rv" id="gal">
+      <button type="button" class="shot is-tall" data-label="Morena iluminada" data-src="assets/img/hair-mechas.png"><img src="assets/img/hair-mechas.png" alt="Cabelo castanho com mechas iluminadas e ondas soltas"></button>
+      <button type="button" class="shot" data-label="Escova &amp; brilho" data-src="assets/img/hair-liso-ruivo.png"><img src="assets/img/hair-liso-ruivo.png" alt="Cabelo ruivo alinhado com brilho após escova"></button>
+      <button type="button" class="shot" data-label="Make de festa" data-src="assets/img/maquiagem-1.png"><img src="assets/img/maquiagem-1.png" alt="Maquiagem de festa com olhos esfumados e pele iluminada"></button>
+      <button type="button" class="shot" data-label="Corte masculino" data-src="assets/img/corte-masculino-1.png"><img src="assets/img/corte-masculino-1.png" alt="Cliente com corte masculino degradê e barba alinhada"></button>
+      <button type="button" class="shot" data-label="Penteado preso" data-src="assets/img/penteado-preso.png"><img src="assets/img/penteado-preso.png" alt="Penteado preso com cachos trabalhados para festa"></button>
+      <button type="button" class="shot" data-label="Loiro acinzentado" data-src="assets/img/maquiagem-2.png"><img src="assets/img/maquiagem-2.png" alt="Cabelo loiro acinzentado com ondas e maquiagem social"></button>
+      <button type="button" class="shot" data-label="Degradê &amp; barba" data-src="assets/img/corte-masculino-2.png"><img src="assets/img/corte-masculino-2.png" alt="Corte masculino degradê alto com barba desenhada"></button>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ============ SOBRE ============ -->
+<section class="sec" id="sobre">
+  <div class="wrap about">
+    <div class="about-img rv">
+      <img src="assets/img/fachada-dia.png" alt="Studio Ranniere Make Hair visto da rua">
+    </div>
+    <div class="rv">
+      <p class="eyebrow">O studio</p>
+      <h2>Um horário que cabe<br>na sua vida.</h2>
+      <p>O <strong>Ranniere Make Hair</strong> nasceu de uma ideia simples: quem trabalha, viaja ou tem festa às onze da noite também precisa de cabelo pronto. Por isso o studio atende <strong>24 horas, todos os dias da semana</strong> — e é, segundo os próprios clientes, um dos poucos lugares abertos em João Pessoa no domingo à noite.</p>
+      <p>À frente da cadeira está <strong>Ranniere Barreto</strong>, cabeleireiro e maquiador com mais de dez anos de estrada na cidade. Atendimento sempre com <strong>hora marcada</strong> e agenda organizada, para você não esperar. O studio fica em <strong>Manaíra</strong>, com estacionamento fácil em frente e nos arredores.</p>
+      <p>Turista de passagem ou cliente de anos: o cuidado com o fio, o produto usado e o acabamento são os mesmos.</p>
+      <div class="sig">Ranniere Barreto</div>
+      <div class="sig-sub">Cabeleireiro &amp; maquiador · @ranybarreto</div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ============ AVALIAÇÕES ============ -->
+<section class="sec" id="avaliacoes">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="eyebrow">Quem já sentou na cadeira</p>
+        <h2>4,9 de 5 no Google</h2>
+      </div>
+      <p class="sec-note">De 58 avaliações públicas, 5 estrelas é a nota que praticamente todo mundo deixa.</p>
+    </div>
+
+    <div class="revs rv">
+      <article class="rev">
+        <div class="rev-stars" aria-label="5 de 5 estrelas">★★★★★</div>
+        <q>Ranni é um excelente profissional, educado, gentil, pontual, cuidadoso com o cabelo da cliente. Fiz o morena iluminada com ele pela segunda vez e não o largo mais. Podem confiar!!</q>
+        <p class="rev-who">Fabíola B. · Avaliação no Google</p>
+      </article>
+      <article class="rev">
+        <div class="rev-stars" aria-label="5 de 5 estrelas">★★★★★</div>
+        <q>Estou com ele desde 2019. Atendimento com hora marcada, agenda organizada e serviço super rápido estão entre suas marcas registradas. Recomendo caso você seja local ou até mesmo turista.</q>
+        <p class="rev-who">Breno L. · Local Guide no Google</p>
+      </article>
+      <article class="rev">
+        <div class="rev-stars" aria-label="5 de 5 estrelas">★★★★★</div>
+        <q>Faço maquiagem com Ranniere há mais de 10 anos. Sempre muito solícito e atento a cada detalhe, bem como a qualidade dos produtos que ele utiliza, que são excelentes.</q>
+        <p class="rev-who">Joelma P. · Avaliação no Google</p>
+      </article>
+    </div>
+
+    <p class="revs-foot rv">Outros clientes destacam ser o <em>“único lugar aberto em João Pessoa no domingo à noite”</em> e <em>“o melhor profissional de cabelo masculino da cidade”</em>. <a href="https://www.google.com/maps/search/?api=1&amp;query=Ranniere%20Make%20Hair%2C%20R.%20Dr.%20Seixas%20Maia%2C%2030%2C%20Mana%C3%ADra%2C%20Jo%C3%A3o%20Pessoa%20-%20PB" target="_blank" rel="noopener">Ver todas no Google →</a></p>
+  </div>
+</section>
+
+<!-- ============ AGENDAR ============ -->
+<section class="sec" id="agendar">
+  <div class="wrap book">
+
+    <div class="rv">
+      <p class="eyebrow">Reserve seu horário</p>
+      <h2>Agendar é uma<br>conversa rápida.</h2>
+      <p class="book-lede">Preencha os campos abaixo. Ao enviar, abre o WhatsApp do studio com a sua solicitação já escrita — é só apertar enviar e confirmar o horário com o Ranniere.</p>
+
+      <form class="form" id="form">
+        <div class="field">
+          <label for="f-nome">Seu nome</label>
+          <input type="text" id="f-nome" name="nome" autocomplete="name" placeholder="Como podemos te chamar" required>
+        </div>
+
+        <div class="field">
+          <label for="f-servico">Serviço desejado</label>
+          <select id="f-servico" name="servico" required>
+            <option value="" disabled selected>Selecione um serviço</option>
+            <option>Corte masculino</option>
+            <option>Corte masculino + barba</option>
+            <option>Barba / design</option>
+            <option>Corte feminino</option>
+            <option>Coloração / morena iluminada</option>
+            <option>Mechas, luzes ou loiro</option>
+            <option>Escova / progressiva</option>
+            <option>Hidratação / tratamento</option>
+            <option>Penteado (noiva, festa ou formatura)</option>
+            <option>Maquiagem profissional</option>
+            <option>Maquiagem + penteado</option>
+            <option>Ainda não sei — quero uma indicação</option>
+          </select>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="f-data">Dia preferido</label>
+            <input type="date" id="f-data" name="data">
+          </div>
+          <div class="field">
+            <label for="f-hora">Horário preferido</label>
+            <select id="f-hora" name="hora">
+              <option value="" disabled selected>Escolha a faixa</option>
+              <option>Manhã (07h às 12h)</option>
+              <option>Tarde (12h às 18h)</option>
+              <option>Noite (18h às 23h)</option>
+              <option>Madrugada (23h às 07h)</option>
+              <option>Tanto faz — o que tiver livre</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="f-obs">Alguma observação</label>
+          <textarea id="f-obs" name="obs" placeholder="Ex.: cabelo com química, quero mudar a cor, é para um casamento no sábado…"></textarea>
+        </div>
+
+        <button class="btn btn-primary" type="submit">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.09 3.2 5.08 4.48.71.31 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.04 21.5h-.01a9.4 9.4 0 0 1-4.79-1.32l-.34-.2-3.56.93.95-3.47-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.19 4.23-9.41 9.42-9.41 2.51 0 4.88.98 6.65 2.76a9.35 9.35 0 0 1 2.76 6.66c-.01 5.19-4.23 9.43-9.42 9.43m8.02-17.44A11.3 11.3 0 0 0 12.04 1C5.84 1 .8 6.04.8 12.24c0 1.98.52 3.92 1.5 5.63L.7 24l6.27-1.64a11.2 11.2 0 0 0 5.07 1.24h.01c6.2 0 11.24-5.04 11.25-11.24a11.2 11.2 0 0 0-3.24-7.94"/></svg>
+          Enviar pelo WhatsApp
+        </button>
+        <p class="form-note">O horário só está confirmado após a resposta do studio. Prefere ligar? <a href="tel:+5583996156267">(83) 99615-6267</a></p>
+      </form>
+    </div>
+
+    <!-- coluna de informações -->
+    <div class="info rv">
+      <div class="info-row">
+        <span class="info-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+        <div class="info-body">
+          <div class="info-k">Endereço</div>
+          <div class="info-v">
+            R. Dr. Seixas Maia, 30 — Sala 103<br>
+            Manaíra, João Pessoa — PB, 58038-080
+            <span class="sm">Plus code V5X8+QP · Estacionamento fácil em frente e nos arredores</span>
+            <span class="sm"><a href="https://www.google.com/maps/search/?api=1&amp;query=R.%20Dr.%20Seixas%20Maia%2C%2030%20-%20Mana%C3%ADra%2C%20Jo%C3%A3o%20Pessoa%20-%20PB%2C%2058038-080" target="_blank" rel="noopener">Abrir rota no Google Maps →</a></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-row">
+        <span class="info-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg></span>
+        <div class="info-body">
+          <div class="info-k">Horário de funcionamento</div>
+          <div class="info-v is-soft">Atendimento 24 horas, todos os dias — sempre com hora marcada.</div>
+          <table class="hours" id="hours">
+            <tbody>
+              <tr data-d="1"><td>Segunda-feira</td><td>24 horas</td></tr>
+              <tr data-d="2"><td>Terça-feira</td><td>24 horas</td></tr>
+              <tr data-d="3"><td>Quarta-feira</td><td>24 horas</td></tr>
+              <tr data-d="4"><td>Quinta-feira</td><td>24 horas</td></tr>
+              <tr data-d="5"><td>Sexta-feira</td><td>24 horas</td></tr>
+              <tr data-d="6"><td>Sábado</td><td>24 horas</td></tr>
+              <tr data-d="0"><td>Domingo</td><td>24 horas</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="info-row">
+        <span class="info-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4Z"/></svg></span>
+        <div class="info-body">
+          <div class="info-k">WhatsApp &amp; telefone</div>
+          <div class="info-v">
+            <a href="https://wa.me/5583996156267" target="_blank" rel="noopener">(83) 99615-6267</a> — WhatsApp principal
+            <span class="sm"><a href="https://wa.me/5583987146995" target="_blank" rel="noopener">(83) 98714-6995</a> — segunda linha</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-row">
+        <span class="info-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></span>
+        <div class="info-body">
+          <div class="info-k">Redes</div>
+          <div class="info-v">
+            <a href="https://instagram.com/ranybarreto" target="_blank" rel="noopener">@ranybarreto</a> no Instagram
+            <span class="sm">Facebook: Ranniere Barreto</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-row">
+        <span class="info-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11.5 11 13.5 15.5 9"/><path d="M12 3 4 6.5v5c0 4.6 3.2 8.6 8 9.5 4.8-.9 8-4.9 8-9.5v-5Z"/></svg></span>
+        <div class="info-body">
+          <div class="info-k">Antes de vir</div>
+          <div class="info-v is-soft">Chegue com 10 minutos de folga. Para coloração, penteado de noiva e maquiagem, agende com antecedência e avise se o cabelo tem química.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ RODAPÉ ============ -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <a href="#inicio" class="mark"><span class="mark-name">Ranniere</span><span class="mark-sub">Make Hair</span></a>
+        <p class="foot-blurb">Studio de beleza 24 horas em Manaíra, João Pessoa — PB.</p>
+        <div class="foot-social">
+          <a href="https://wa.me/5583996156267" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.09 3.2 5.08 4.48.71.31 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.04 21.5h-.01a9.4 9.4 0 0 1-4.79-1.32l-.34-.2-3.56.93.95-3.47-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.19 4.23-9.41 9.42-9.41 2.51 0 4.88.98 6.65 2.76a9.35 9.35 0 0 1 2.76 6.66c-.01 5.19-4.23 9.43-9.42 9.43m8.02-17.44A11.3 11.3 0 0 0 12.04 1C5.84 1 .8 6.04.8 12.24c0 1.98.52 3.92 1.5 5.63L.7 24l6.27-1.64a11.2 11.2 0 0 0 5.07 1.24h.01c6.2 0 11.24-5.04 11.25-11.24a11.2 11.2 0 0 0-3.24-7.94"/></svg></a>
+          <a href="https://instagram.com/ranybarreto" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.15-3.23 1.66-4.77 4.92-4.92C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 2.7.27.28 2.69.08 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0m0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32M12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8m6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88"/></svg></a>
+          <a href="tel:+5583996156267" aria-label="Telefone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .7-.2 1l-2.3 2.2Z"/></svg></a>
+        </div>
+      </div>
+
+      <nav class="foot-nav" aria-label="Rodapé">
+        <a href="#servicos">Serviços</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#sobre">O Studio</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="#agendar">Agendar</a>
+      </nav>
+
+      <div class="foot-addr">
+        <div class="info-k">Onde estamos</div>
+        <p>R. Dr. Seixas Maia, 30 — Sala 103<br>Manaíra, João Pessoa — PB<br>CEP 58038-080</p>
+        <p>Aberto 24 horas, todos os dias</p>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <span>© <span id="ano">2026</span> Ranniere Make Hair · Studio de Beleza</span>
+      <span>Manaíra · João Pessoa · Paraíba</span>
+    </div>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/5583996156267?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Ranniere%20Make%20Hair." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.09 3.2 5.08 4.48.71.31 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.04 21.5h-.01a9.4 9.4 0 0 1-4.79-1.32l-.34-.2-3.56.93.95-3.47-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.19 4.23-9.41 9.42-9.41 2.51 0 4.88.98 6.65 2.76a9.35 9.35 0 0 1 2.76 6.66c-.01 5.19-4.23 9.43-9.42 9.43m8.02-17.44A11.3 11.3 0 0 0 12.04 1C5.84 1 .8 6.04.8 12.24c0 1.98.52 3.92 1.5 5.63L.7 24l6.27-1.64a11.2 11.2 0 0 0 5.07 1.24h.01c6.2 0 11.24-5.04 11.25-11.24a11.2 11.2 0 0 0-3.24-7.94"/></svg>
+</a>
+
+<!-- lightbox -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+  <button type="button" class="lb-close" id="lb-close" aria-label="Fechar">✕</button>
+  <img id="lb-img" src="" alt="">
+  <p class="lb-cap" id="lb-cap"></p>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"HairSalon",
+  "name":"Ranniere Make Hair",
+  "alternateName":"Ranniere Make Hair — Studio de Beleza",
+  "description":"Studio de beleza aberto 24 horas em Manaíra, João Pessoa. Corte masculino e feminino, coloração, morena iluminada, escova, penteado e maquiagem profissional.",
+  "image":"assets/img/fachada-noite.png",
+  "telephone":"+55-83-99615-6267",
+  "priceRange":"$$",
+  "currenciesAccepted":"BRL",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"R. Dr. Seixas Maia, 30 - Sala 103",
+    "addressLocality":"João Pessoa",
+    "addressRegion":"PB",
+    "postalCode":"58038-080",
+    "addressCountry":"BR"
+  },
+  "openingHoursSpecification":[{
+    "@type":"OpeningHoursSpecification",
+    "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens":"00:00",
+    "closes":"23:59"
+  }],
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"58","bestRating":"5"},
+  "sameAs":["https://instagram.com/ranybarreto"],
+  "hasMap":"https://www.google.com/maps/search/?api=1&query=R.%20Dr.%20Seixas%20Maia%2C%2030%20-%20Mana%C3%ADra%2C%20Jo%C3%A3o%20Pessoa%20-%20PB",
+  "hasOfferCatalog":{
+    "@type":"OfferCatalog",
+    "name":"Serviços",
+    "itemListElement":[
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Corte masculino e barba"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Coloração e morena iluminada"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Escova, progressiva e tratamento"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Penteados para noivas e festas"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Maquiagem profissional"}}
+    ]
+  }
+}
+</script>
+
+<script>
+(function(){
+  "use strict";
+
+  var WA = "5583996156267";
+
+  /* --- borda do topo ao rolar --- */
+  var nav = document.getElementById('nav');
+  function onScroll(){ nav.classList.toggle('is-stuck', window.scrollY > 12); }
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  /* --- menu mobile --- */
+  var toggle = document.getElementById('nav-toggle');
+  var menu = document.getElementById('menu');
+  function fecharMenu(){
+    menu.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded','false');
+    toggle.setAttribute('aria-label','Abrir menu');
+    document.body.style.overflow = '';
+  }
+  toggle.addEventListener('click', function(){
+    var aberto = menu.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', String(aberto));
+    toggle.setAttribute('aria-label', aberto ? 'Fechar menu' : 'Abrir menu');
+    document.body.style.overflow = aberto ? 'hidden' : '';
+  });
+  menu.addEventListener('click', function(ev){ if (ev.target.tagName === 'A') fecharMenu(); });
+
+  /* --- relógio de João Pessoa (UTC-3, sem horário de verão) --- */
+  var big = document.getElementById('clock-big');
+  var badge = document.getElementById('clock-badge');
+
+  function agoraJP(){
+    try {
+      return new Intl.DateTimeFormat('pt-BR', {
+        timeZone:'America/Fortaleza', hour:'2-digit', minute:'2-digit', hour12:false
+      }).format(new Date());
+    } catch(e){
+      var d = new Date(Date.now() - 3*3600*1000);
+      return ('0'+d.getUTCHours()).slice(-2)+':'+('0'+d.getUTCMinutes()).slice(-2);
+    }
+  }
+  function tick(){
+    var t = agoraJP();
+    if (big) big.textContent = t;
+    if (badge) badge.textContent = 'Aberto agora — são ' + t + ' em João Pessoa';
+  }
+  tick();
+  setInterval(tick, 20000);
+
+  /* --- destaca o dia de hoje na tabela de horários --- */
+  var linhaHoje = document.querySelector('#hours tr[data-d="' + new Date().getDay() + '"]');
+  if (linhaHoje) linhaHoje.classList.add('is-today');
+
+  var ano = document.getElementById('ano');
+  if (ano) ano.textContent = new Date().getFullYear();
+
+  /* --- data mínima do formulário = hoje --- */
+  var campoData = document.getElementById('f-data');
+  if (campoData){
+    var hoje = new Date();
+    hoje.setMinutes(hoje.getMinutes() - hoje.getTimezoneOffset());
+    campoData.min = hoje.toISOString().slice(0,10);
+  }
+
+  /* --- formulário monta a mensagem do WhatsApp --- */
+  var form = document.getElementById('form');
+  if (form){
+    form.addEventListener('submit', function(ev){
+      ev.preventDefault();
+
+      var data = form.data.value, dataFmt = '';
+      if (data){
+        var p = data.split('-');
+        dataFmt = p[2] + '/' + p[1] + '/' + p[0];
+      }
+
+      var linhas = [
+        'Olá! Gostaria de agendar um horário no Ranniere Make Hair.',
+        '',
+        'Nome: ' + form.nome.value.trim(),
+        'Serviço: ' + form.servico.value
+      ];
+      if (dataFmt)              linhas.push('Dia: ' + dataFmt);
+      if (form.hora.value)      linhas.push('Horário: ' + form.hora.value);
+      if (form.obs.value.trim())linhas.push('Observação: ' + form.obs.value.trim());
+      linhas.push('', 'Fico no aguardo da confirmação. Obrigado!');
+
+      window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(linhas.join('\n')), '_blank', 'noopener');
+    });
+  }
+
+  /* --- lightbox da galeria --- */
+  var lb = document.getElementById('lb'),
+      lbImg = document.getElementById('lb-img'),
+      lbCap = document.getElementById('lb-cap'),
+      lbClose = document.getElementById('lb-close'),
+      ultimoFoco = null;
+
+  function abrir(btn){
+    ultimoFoco = btn;
+    lbImg.src = btn.getAttribute('data-src');
+    lbImg.alt = btn.querySelector('img').alt;
+    lbCap.textContent = btn.getAttribute('data-label');
+    lb.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    lbClose.focus();
+  }
+  function fechar(){
+    lb.classList.remove('is-open');
+    lbImg.removeAttribute('src');
+    document.body.style.overflow = '';
+    if (ultimoFoco) ultimoFoco.focus();
+  }
+
+  var gal = document.getElementById('gal');
+  if (gal){
+    gal.addEventListener('click', function(ev){
+      var btn = ev.target.closest('.shot');
+      if (btn) abrir(btn);
+    });
+  }
+  lbClose.addEventListener('click', fechar);
+  lb.addEventListener('click', function(ev){ if (ev.target === lb || ev.target === lbImg) fechar(); });
+  document.addEventListener('keydown', function(ev){
+    if (ev.key !== 'Escape') return;
+    if (lb.classList.contains('is-open')) fechar();
+    else if (menu.classList.contains('is-open')) fecharMenu();
+  });
+
+  /* --- revelação no scroll --- */
+  var alvos = document.querySelectorAll('.rv');
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io = new IntersectionObserver(function(entradas){
+      entradas.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); }
+      });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:.08});
+    alvos.forEach(function(el){ io.observe(el); });
+  } else {
+    alvos.forEach(function(el){ el.classList.add('is-in'); });
+  }
+})();
+</script>
+</body>
+</html>
